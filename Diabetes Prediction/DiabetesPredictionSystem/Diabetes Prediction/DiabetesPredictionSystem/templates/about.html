@@ -1,0 +1,252 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict My Value</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body 
+        {
+            background-image: url("{% static 'DiabetesPredictionSystem\images\img1.jpg' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .main
+        {
+            background-image: url("{% static 'DiabetesPredictionSystem\images\img5.jpg' %}");
+            background-repeat: no-repeat;
+            width: 80%;
+            background-color:#ffffff;
+            border-radius: 10px;
+            align-items: center;
+            margin-top: 3rem;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 3rem;
+            padding: 5%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            color: #e5e5e5;
+            font-weight: bold;
+        }
+
+        .main.background 
+        {
+            opacity: 0.2;
+        }
+
+        h1
+        {
+            color: #fca311;
+            font-size: 3rem;
+            font-weight: bold;
+            padding-bottom: 1rem;
+        }
+
+        h2
+        {
+            color: #ffd166;
+            font-size: 2rem;
+            font-weight: bold;
+            padding-bottom: 1rem;
+        }
+        strong
+        {
+            color: #76c893;
+        }
+
+        input[type=submit]
+        {
+            background-color: #4dc3ff;
+            border: 2px;
+            color: white;
+            padding: 8px 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .navbar-brand
+        {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .nav-link
+        {
+            color: #FFFFFF;
+            font-size: 1.3rem;
+        }
+
+        td
+        {
+            padding-right: 1rem;
+        }
+
+        .res
+        {
+            padding-top: 1rem;
+            color: #ffb703;
+            font-weight: bold;
+        }
+
+        .result
+        {
+            font-weight: bold;
+        }
+
+        .positive
+        {
+            color: #dd1c1a;
+            font-weight: bolder;
+            font-size: 2rem;
+        }
+
+        .negative
+        {
+            color: #7ae582;
+            font-weight: bolder;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #03045e;">
+    <a class="navbar-brand" style="padding-left: 2rem" href="/">DPS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" style="padding-right: 2rem" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="/">Home</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+        </li>
+        </ul>
+    </div>
+    </nav>
+    <div class='main'>
+    <header>
+        <h1>About Diabetes Prediction System</h1>
+    </header>
+
+    <section id="mission">
+        <h2>Welcome to Diabetes Prediction Project</h2>
+        <p>
+            At DPS, we are committed to improving public health by harnessing the power of data and technology. 
+            Our Diabetes Prediction System is a cutting-edge initiative designed to empower individuals and 
+            healthcare professionals with valuable insights into diabetes risk, facilitating early intervention 
+            and better management of this prevalent chronic disease.
+        </p>
+    </section>
+
+    <section id="our-mission">
+        <h2>Our Mission</h2>
+        <p>
+            <strong>Empowering Prevention:</strong> Our primary mission is to empower individuals with the 
+            knowledge they need to take control of their health and prevent the onset of diabetes through 
+            early detection and personalized guidance.
+        </p>
+        <p>
+            <strong>Enhancing Healthcare:</strong> We aim to support healthcare professionals in delivering 
+            more personalized care by providing them with accurate predictive tools that aid in risk assessment 
+            and treatment planning.
+        </p>
+    </section>
+
+    <section id="key-features">
+        <h2>Key Features</h2>
+        <ul>
+            <li>
+                <strong>Data-Driven Predictive Models</strong>: We utilize state-of-the-art machine learning and 
+                statistical modeling techniques to analyze a wide range of data sources, including electronic 
+                health records, lifestyle factors, genetic information, and more. Our predictive models provide 
+                accurate assessments of an individual's diabetes risk.
+            </li>
+            <li>
+                <strong>Personalized Risk Assessment</strong>: Our system generates personalized risk scores, 
+                helping users understand their susceptibility to diabetes. These scores are based on a 
+                comprehensive analysis of their health data, allowing for tailored recommendations.
+            </li>
+            <li>
+                <strong>User-Friendly Interface</strong>: Our user-friendly interface ensures that anyone can 
+                easily input their data and receive predictions and recommendations. Whether you're a healthcare 
+                professional or an individual concerned about your health, our platform is accessible and intuitive.
+            </li>
+            <li>
+                <strong>Privacy and Security</strong>: We prioritize your data privacy and security. 
+                All personal health information is handled with the utmost care and complies with relevant data 
+                protection regulations.
+            </li>
+            <li>
+                <strong>Continuous Monitoring and Updates</strong>: Health is dynamic, and so is our system. 
+                We offer continuous monitoring and timely updates, allowing users to track changes in their 
+                diabetes risk and adapt their health strategies accordingly.
+            </li>
+        </ul>
+    </section>
+
+    <section id="get-started">
+        <h2>How to Get Started</h2>
+        <ol>
+            <li><strong>Go to Prediction Page:</strong> Click the 'Go to Prediction Page...' button.</li>
+            <li><strong>Input Your Data:</strong> Input your relevant health data.</li>
+            <li><strong>Receive Your Prediction:</strong> Our system will analyze your data and provide you with a 
+                personalized diabetes risk assessment.</li>
+            <li><strong>Take Control:</strong> Armed with this information, you can take proactive steps to manage your health,
+                such as adopting a healthier lifestyle, seeking further medical evaluation, or consulting with a 
+                healthcare professional.</li>
+        </ol>
+    </section>
+
+    <section id="disclaimer">
+    <h2>Disclaimer</h2>
+    <p>
+        Our Diabetes Prediction System is powered by advanced machine learning models and predictive algorithms. However, it's important to note the following:
+    </p>
+    
+    <p>
+        <strong>1. Predictive Accuracy:</strong> While our models are designed to provide accurate predictions based on the available data, no prediction system is infallible. Predictions are probabilistic and subject to inherent uncertainties.
+    </p>
+    
+    <p>
+        <strong>2. Data Dependencies:</strong> The accuracy of predictions depends on the quality and completeness of the data you provide. Incomplete or inaccurate data may lead to less reliable predictions.
+    </p>
+    
+    <p>
+        <strong>3. Not a Substitute for Medical Advice:</strong> Our Diabetes Prediction System is not a substitute for professional medical advice, diagnosis, or treatment. It is meant to assist individuals and healthcare professionals in assessing diabetes risk and making informed decisions. Always consult with a qualified healthcare provider for personalized medical advice and treatment.
+    </p>
+    
+    <p>
+        <strong>4. Continuous Monitoring:</strong> Diabetes risk can change over time due to various factors, including lifestyle changes and aging. It's important to use our system as part of an ongoing health monitoring plan.
+    </p>
+    
+    <p>
+        <strong>5. Privacy and Security:</strong> We prioritize the privacy and security of your data. However, no online platform is completely immune to data breaches. Please review our <a href="#privacy-policy">Privacy Policy</a> for more information on how we handle your data.
+    </p>
+</section>
+    <section id="contact-us">
+        <h2>Contact Us</h2>
+        <p>
+            We are passionate about improving healthcare outcomes and empowering individuals to lead healthier 
+            lives. If you have any questions, feedback, or partnership inquiries, please don't hesitate to 
+            <a href="mailto:dummy@gmail.com">contact us</a>. Together, we can make a difference 
+            in the fight against diabetes.
+        </p>
+    </section>
+
+
+    <footer>
+        <p>Thank you for being a part of our mission!</p>
+    </footer>
+</div>
+</body>
+
+</html>
